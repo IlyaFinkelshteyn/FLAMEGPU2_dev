@@ -26,7 +26,13 @@ clone_folder: C:\projects\FLAMEGPU2_dev
 
 # scripts that run after cloning repository
 install:
+  - ps: Write-host "path before start ++++++++++++++++++++++++++++"
+  - ps: $env:path -split ";"
+  - ps: Write-host "path before end ++++++++++++++++++++++++++++"
   - ps: .\scripts\appveyor_install.ps1
+  - ps: Write-host "path after start ++++++++++++++++++++++++++++"
+  - ps: $env:path -split ";"
+  - ps: Write-host "path after end ++++++++++++++++++++++++++++"
 
 # The build
 #build:
