@@ -27,9 +27,9 @@ clone_folder: C:\projects\FLAMEGPU2_dev
 # scripts that run after cloning repository
 install:
   - ps: .\scripts\appveyor_install.ps1
-  - ps: sleep 5
-  - ps: restart-computer -f
-  - ps: sleep 5
+  - ps: sleep 10
+  #- ps: restart-computer -f
+  #- ps: sleep 5
 
 # The build
 build:
